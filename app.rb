@@ -18,44 +18,39 @@ companies = [
 ### Your code below this
 
 def company_list(array)
-    array.each do |company|
-        puts "#{company.name} - #{company.size}"
-        # binding.pry
-    end
+  array.each do |company|
+    puts "#{company.name} - #{company.size}"
+  end
 end
 
 def total_size(array)
-    array.reduce(0) do |sum, company|
-        sum + company.size
-    end
+  array.reduce(0) do |sum, company|
+    sum + company.size
+  end
 end
 
-def filter_size(array,min_size)
-    array.find_all do |company|
-        # binding.pry
-        company.size > min_size
-    end
+def filter_size(array, min_size)
+  array.find_all do |company|
+    company.size > min_size
+  end
 end
 
-def find_company(array,name)
-    array.find do |company|
-        # binding.pry
-        company.name == name.to_s
-    end
+def find_company(array, name)
+  array.find do |company|
+    company.name == name.to_s
+  end
 end
 
 def find_largest(array)
-    array.max_by do |company|
-        company.size
-        # binding.pry
-    end
+  array.max_by do |company|
+    company.size
+  end
 end
 
 def sort_descending(array)
-    array.sort do |company|
-        # binding.pry
-        company.size 
-    end
+  array.sort do |company|
+    company.size
+  end
 end
 
 company_list(companies)
@@ -69,4 +64,3 @@ p '-'
 p find_largest(companies)
 p '-'
 p sort_descending(companies)
-# binding.pry
